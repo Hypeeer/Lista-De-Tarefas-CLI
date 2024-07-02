@@ -1,0 +1,16 @@
+{
+    "name": "lista_de_tarefas_cli",
+    "version": "1.0.0",
+    "description": "Nome do Projeto: Lista de Tarefas CLI\r Descrição:\r Desenvolveremos um aplicativo de linha de comando (CLI) que permitirá aos usuários gerenciar uma lista de tarefas. Os usuários poderão adicionar, \r visualizar, marcar como concluídas e remover tarefas da lista.",
+    "type": "module",
+    "main": "Lista_de_Tarefas.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "readline-sync": "^1.4.10"
+    }
+}
