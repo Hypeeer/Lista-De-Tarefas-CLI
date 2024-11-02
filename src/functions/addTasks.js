@@ -8,11 +8,11 @@ const addTasks = () => {
   object.name = readlineSync.question('name: ');
   object.description = readlineSync.question('Descrição: ');
   console.log('\nTarefa salva com sucesso!');
-  saveTasks.push(object); //ao final o push adiconar em fila na variavel
+  saveTasks.push(object); //ao final o push adiconar em fila no array vazio
   exitMenu();
 };
 
-//função para trata a saida do programa, tanto o encerramento ou a volta ao menu principal
+//função para trata a saida do programa, tanto o encerramento ou a volta ao fluxo do menu principal
 const exitMenu = () => {
   console.log('\nDeseja salvar outra tarefa ? ');
   const userChoice = readlineSync.question('Sim (s) / Não (n): ');
@@ -21,7 +21,7 @@ const exitMenu = () => {
   } else if (userChoice === 'n') {
     console.log('\nDeseja volta para o menu pricipal ?');
     const userChoice = readlineSync.question('Sim (s) / Não (n): ');
-    return userChoice === 's' ? console.log('\nVoltando para o menu...\n') : console.log('Obrigado (a)! Ate logo'), process.exit(0); //process faz o ecerramento caso as cindiçoes forem aceitas
+    return userChoice === 's' ? console.log('\nVoltando para o menu...\n') : console.log('Obrigado (a)! Ate logo'), process.exit(0); //process faz o ecerramento caso as condiçoes forem aceitas
   }
 };
 
