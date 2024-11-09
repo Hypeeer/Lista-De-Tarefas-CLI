@@ -21,7 +21,12 @@ const exitMenu = () => {
   } else if (userChoice === 'n') {
     console.log('\nDeseja volta para o menu pricipal ?');
     const userChoice = readlineSync.question('Sim (s) / Não (n): ');
-    return userChoice === 's' ? console.log('\nVoltando para o menu...\n') : console.log('Obrigado (a)! Ate logo'), process.exit(0); //process faz o ecerramento caso as condiçoes forem aceitas
+    if (userChoice === 's') {
+      console.log('Voltando para o menu!...');
+    } else {
+      console.log('Obrigado (a). Ate logo!');
+      process.exit(0); //encerra a execução do fluxo caso as condiçoes seja aceitas
+    }
   }
 };
 
