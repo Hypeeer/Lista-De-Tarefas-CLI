@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
 import addTasks from './src/functions/addTasks.js';
+import displayTasksFormatted from './src/functions/viwerTasks.js';
 
 const mainMenu = () => {
-  do {
+  while (true) {
     console.log('Lista de tarefas');
     console.log('[1] Adicionar Tarefa');
     console.log('[2] Vizualizar Lista de Tarefas');
@@ -17,6 +18,7 @@ const mainMenu = () => {
         addTasks();
         break;
       case '2':
+        displayTasksFormatted();
         break;
       case '3':
         break;
@@ -27,7 +29,7 @@ const mainMenu = () => {
       console.log('Fim do programa!');
       break;
     }
-  } while (true);
+  }
 };
 
 mainMenu();
