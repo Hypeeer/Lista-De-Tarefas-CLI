@@ -1,8 +1,9 @@
-import checkIfTheFunctionIsEmpty from './checkIfTheFunctionsIsEmpty.js';
+import checkIfTheFunctionIsEmpty from '../verification/isEmpty.js';
 import { saveTasks } from './addTasks.js';
 
 const displayTasksFormatted = () => {
   const tasksToFormat = saveTasks;
+  console.log('\nAqui estão suas tarefas');
   checkIfTheFunctionIsEmpty(tasksToFormat);
   tasksToFormat.forEach((saveTasks) => {
     console.log(`\nID: ${saveTasks.id}`);

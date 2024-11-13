@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import exitMenuAddTask from '../verification/backToManu.js';
 
 const saveTasks = []; // Recebe todos as tarefas em um array de objetos
 
@@ -9,25 +10,7 @@ const addTasks = () => {
   object.description = readlineSync.question('Descrição: ');
   console.log('\nTarefa salva com sucesso!');
   saveTasks.push(object); //ao final o push adiconar em fila no array vazio
-  exitMenu();
-};
-
-//função para trata a saida do programa, tanto o encerramento ou a volta ao fluxo do menu principal
-const exitMenu = () => {
-  console.log('\nDeseja salvar outra tarefa ? ');
-  const userChoice = readlineSync.question('Sim (s) / Não (n): ');
-  if (userChoice === 's') {
-    return addTasks();
-  } else if (userChoice === 'n') {
-    console.log('\nDeseja volta para o menu pricipal ?');
-    const userChoice = readlineSync.question('Sim (s) / Não (n): ');
-    if (userChoice === 's') {
-      console.log('Voltando para o menu!...');
-    } else {
-      console.log('Obrigado (a). Ate logo!');
-      process.exit(0); //encerra a execução do fluxo caso as condiçoes seja aceitas
-    }
-  }
+  exitMenuAddTask();
 };
 
 export default addTasks;
