@@ -1,3 +1,4 @@
+import checkIfTheFunctionIsEmpty from './checkIfTheFunctionsIsEmpty.js';
 import { saveTasks } from './addTasks.js';
 
 const displayTasksFormatted = () => {
@@ -8,12 +9,7 @@ const displayTasksFormatted = () => {
     console.log(`Nome: ${saveTasks.name}`);
     console.log(`Descrição: ${saveTasks.description}\n`);
   });
-};
-
-const checkIfTheFunctionIsEmpty = (saveTasks) => {
-  if (!saveTasks.length) {
-    console.log('\nAdicione tarefas antes de vizualizar na opção [1]! \n');
-  }
+  return tasksToFormat;
 };
 
 export default displayTasksFormatted;
