@@ -7,7 +7,7 @@ const mainMenu = () => {
     console.log('Lista de tarefas');
     console.log('[1] Adicionar Tarefa');
     console.log('[2] Vizualizar Lista de Tarefas');
-    console.log('[3] Marca Tarefa Comcluidas');
+    console.log('[3] Marca Tarefa Concluidas');
     console.log('[4] Remover Terefa');
     console.log('[0] Encerra Programa');
 
